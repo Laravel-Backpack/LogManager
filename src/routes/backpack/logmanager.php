@@ -18,5 +18,5 @@ Route::group([
     Route::get('log', 'LogController@index')->name('log.index');
     Route::get('log/preview/{file_name}', 'LogController@preview')->name('log.show');
     Route::get('log/download/{file_name}', 'LogController@download')->name('log.download');
-    Route::delete('log/delete/{file_name}', 'LogController@delete')->name('log.destroy');
+    Route::get('log/delete/{file_name}', 'LogController@delete')->name('log.destroy');
 });
