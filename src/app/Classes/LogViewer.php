@@ -179,6 +179,25 @@ class LogViewer
             }
         }
 
+        if (empty($log)) {
+            $lines = preg_split('/\r\n|\r|\n/', $file);
+
+            foreach ($lines as $line) {
+                if (!empty(trim($line))) {
+                    $log[] = [
+                        'context'     => null,
+                        'level'       => 'info',
+                        'level_class' => static::$levels_classes['info'],
+                        'level_img'   => static::$levels_imgs['info'],
+                        'date'        => null,
+                        'text'        => $line,
+                        'in_file'     => null,
+                        'stack'       => '',
+                    ];
+                }
+            }
+        }
+
         return array_reverse($log);
     }
 
