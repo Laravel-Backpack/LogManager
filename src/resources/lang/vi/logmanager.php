@@ -29,6 +29,6 @@ return [
     'delete_cancel_message'       => 'Tập tin nhật ký chưa bị xóa.',
     'delete_error_message'        => 'Tập tin nhật ký chưa bị xóa.',
     'delete_confirmation_message' => 'Tập tin nhật ký đã được xóa.',
-    'log_file_doesnt_exist'       => "Tập tin nhật ký không tồn tại.",
+    'log_file_doesnt_exist'       => 'Tập tin nhật ký không tồn tại.',
 
 ];
