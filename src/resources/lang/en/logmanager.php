@@ -30,5 +30,7 @@ return [
     'delete_error_message'        => 'The log file has NOT been deleted.',
     'delete_confirmation_message' => 'The log file was deleted.',
     'log_file_doesnt_exist'       => "The log file doesn't exist.",
+    'link_copied_to_clipboard'    => 'Link copied to clipboard',
+    'link_copy_failed'            => 'Failed to copy link',
 
 ];
