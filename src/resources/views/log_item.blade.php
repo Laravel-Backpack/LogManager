@@ -40,7 +40,9 @@
         <div id="collapse{{ $key }}" class="panel-collapse collapse p-3" role="tabpanel" aria-labelledby="heading{{ $key }}" data-parent="#accordion" data-bs-parent="#accordion">
           <div class="panel-body">
             <p>{{$log['text']}}</p>
+            @if(!empty(trim($log['stack'])))
             <pre class="p-0" ><code>{{ trim($log['stack']) }}</code></pre>
+            @endif
           </div>
         </div>
       </div>
