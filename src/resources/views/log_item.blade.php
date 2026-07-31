@@ -40,7 +40,9 @@
         <div id="collapse{{ $key }}" class="panel-collapse collapse p-3" role="tabpanel" aria-labelledby="heading{{ $key }}" data-parent="#accordion" data-bs-parent="#accordion">
           <div class="panel-body">
             <p>{{$log['text']}}</p>
+            @if(!empty(trim($log['stack'])))
             <pre class="p-0" ><code>{{ trim($log['stack']) }}</code></pre>
+            @endif
           </div>
         </div>
       </div>
@@ -52,8 +54,8 @@
 @endsection
 
 @section('after_scripts')
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   <script>
     function openAccordionFromHash() {
